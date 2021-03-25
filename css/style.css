@@ -1,0 +1,260 @@
+/* STYLE GENERALE */
+
+.container{
+    margin: 0;
+    padding-bottom: 30px;
+}
+
+body{
+    margin: 0px;
+    padding: 0px;
+}
+
+header{
+    width: 100%;
+    height: 70px;
+    padding-left: 10px;
+    background-color: #2F80ED;
+    display: flex;
+    align-items: center;
+}
+
+main{
+    width: 95%;
+    height: max-content;
+    margin: auto;
+}
+
+.space{
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+}
+
+.inline{
+    width: inherit;
+    display: inherit;
+    text-align: center;
+    margin-top: 20px;
+    position: relative;
+}
+
+
+
+
+.element{
+    margin-top: 20px;
+    width: 100%;
+}
+
+.enfant{
+    width: inherit;
+    display: flex;
+    justify-content: space-between;
+    width: inherit;
+}
+
+.form{
+    width: 37.5%;
+    height: max-content;
+    text-align: left;
+    background-color: rgb(223, 228, 235);
+    border: solid 1px rgb(114, 151, 219);
+}
+
+.affichage{
+    width: 62%;
+    border: solid 1px rgb(114, 151, 219);
+}
+
+.titre{
+    width: 100%;
+    height: 40px;
+    background-color: #2F80ED;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+
+
+
+
+/*  STYLE POUR LES IMAGES */
+
+.img-capte{
+    width: 35%;
+    height: 30px;
+    padding: 5px;
+    border: 1px solid rgb(41, 39, 39);
+    border-radius: 0px;
+    margin-left: 20px;
+    font-size: 22px;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+.img-select{
+    margin-top: 20px;
+    width: 35%;
+    height: 150px;
+    margin-right: 20px;
+}
+
+.img-rond{
+    position: absolute;
+    left: 2%;
+    width: 20%;
+    height: 160px;
+    border-radius: 200px;
+}
+
+
+
+
+/* quelques sections */
+
+
+.information{
+    width: 100%;
+    height: 190px;
+    margin: 0px 0px;
+    padding: 10px 10px;
+    position: relative;
+    word-wrap: break-word;
+}
+
+.sect-info{
+    position: absolute;
+    width: 67%;
+    left: 25%;
+    height: max-content;
+    text-align: left;
+}
+
+
+
+/* Les autres elements */
+
+.size{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.reajuste{
+    height: 25px;
+}
+
+.hid{
+    opacity: 0;
+}
+
+.alert{
+    position: absolute;
+    width: inherit;
+    margin-left: 10%;
+    text-align: center;
+    top: 35%;
+    font-size: 80px;
+    border: blue 2 solid;
+    background-color: rgb(178, 223, 236);
+    color: red;
+    border-radius: 20px;
+    padding: 5px 30px;
+}
+
+.left{
+    left: 3.3%;
+    position: absolute;
+}
+
+.back{
+    padding: 10px 10px;
+}
+
+.text-white{
+    color: white;
+}
+
+.text-blue{
+    color: #2F80ED;
+}
+
+
+
+/* style pour les boutons et les input */
+
+button#creer, button#reinit{
+    width: 40%;
+    height: 40px;
+    margin: 0px 20px;
+    border: none;
+    font-size: 22px;
+    margin-top: 50px;
+}
+
+button#creer{
+    background-color: #2F80ED;
+    box-shadow: 0px 3px 3px 0px rgb(90, 79, 79);
+}
+
+button#reinit{
+    background-color: rgb(218, 68, 68);
+    box-shadow: 0px 3px 3px 0px rgb(90, 79, 79);
+}
+
+button:focus{
+    outline: none;
+}
+
+btn-suppression{
+    width: 5%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+label{
+    font-size: 16px;
+}
+
+.btn-suppression{
+    height: 20px;
+}
+
+input[type='text'], select, textarea{
+    width: 95%;
+    margin-top: 3px;
+    border-radius: 8px;
+    border: 1px solid #99b7dd;
+}
+
+input[type='text']:focus, select:focus, textarea:focus{
+    outline: none;
+}
+
+input, select{
+    height: 30px;
+    padding: 5px;
+}
+
+select{
+    background-image: url("../img/arrow\ back.png");
+    background-color: white;
+    background-repeat: no-repeat;
+    background-position-x: 100%;
+    appearance: none;
+}
+
+input[type='file']{
+    opacity: 0;
+    width: inherit;
+    height: inherit;
+}
+
+input[type='file']::selection{
+    opacity: 0;
+    width: inherit;
+    height: inherit;
+}

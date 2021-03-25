@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Répertoire de contact</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="text-white">Répertoire de contact</h2>
+        </header>
+        <main>
+            <div class="element">
+                <div class="enfant">
+                    <div class="form">
+                        <div class="titre">
+                            <h2 class="text-white">Formulaire de contact</h3>
+                        </div>
+                        <form action="" class="back" method="GET">
+                            <div class="inline">
+                                <label for="prenom" class="text-blue left">Prenom</label><br>
+                                <input type="text" id="prenom" required>
+                            </div>
+
+                            <div class="inline">
+                                <label for="prenom" class="text-blue left">Nom</label><br>
+                                <input type="text" id="nom" required>
+                            </div>
+
+                            <div class="inline">
+                                <label for="groupe" class="text-blue left">Goupe</label><br>
+                                <select id="selection" >
+                                    <option value="Great">Grand</option>
+                                    <option value="Medium">Milieu</option>
+                                    <option value="Small">Petit</option>
+                                </select>
+                
+                            </div>
+
+                            <div class="inline">
+                                <label for="prenom" class="text-blue left">Bio</label><br>
+                                <textarea id="bio" cols="30" rows="10" required></textarea>
+                            </div>
+
+                            <div class="inline">
+                                <div class="space">
+                                    <label class="img-capte">Choisir un fichier<input type="file" id="photo" accept="image/png, image/jpeg" required></label>
+                                    <img src="" alt="" class="img-select hid" id="ab">
+                                </div>
+                            </div>
+                            <div class="inline">
+                                <div class="space">
+                                    <button id="creer" class=" text-white">Créer</button>
+                                    <button id="reinit" class=" text-white">Réinit.</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="affichage">
+                        <div class="titre">
+                            <h2 class="text-white">Liste de contact</h3>
+                        </div>
+                        <div class="back scroll" id="voir">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="js/javacript.js"></script>
+</body>
+</html>
