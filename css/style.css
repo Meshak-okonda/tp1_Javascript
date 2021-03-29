@@ -55,22 +55,28 @@ main{
     width: inherit;
 }
 
+
 .form{
     width: 37.5%;
     height: max-content;
     text-align: left;
     background-color: rgb(223, 228, 235);
     border: solid 1px rgb(114, 151, 219);
+    animation: slide 2s cubic-bezier(0.55, 0.085, 0.68, 1);
 }
 
 .affichage{
     width: 62%;
     border: solid 1px rgb(114, 151, 219);
+    animation: slide 2.5s cubic-bezier(0.55, 0.085, 0.68, 1);
+    animation-iteration-count: 1;
 }
+
+
 
 .titre{
     width: 100%;
-    height: 40px;
+    height: 50px;
     background-color: #2F80ED;
     display: flex;
     align-items: center;
@@ -106,9 +112,10 @@ main{
 .img-rond{
     position: absolute;
     left: 2%;
-    width: 20%;
-    height: 160px;
-    border-radius: 200px;
+    width: 17%;
+    height: 170px;
+    border-radius: 100%;
+    top: 20px;
 }
 
 
@@ -118,12 +125,18 @@ main{
 
 
 .information{
-    width: 100%;
+    width: 97%;
     height: 190px;
     margin: 0px 0px;
     padding: 10px 10px;
     position: relative;
     word-wrap: break-word;
+    margin-bottom: 20px;
+}
+
+.information:hover{
+    transition: linear 10s;
+    background-color: rgb(127, 238, 241);
 }
 
 .sect-info{
@@ -152,17 +165,29 @@ main{
 }
 
 .alert{
+    top: 40%;
     position: absolute;
-    width: inherit;
-    margin-left: 10%;
+    margin: auto;
     text-align: center;
-    top: 35%;
-    font-size: 80px;
-    border: blue 2 solid;
-    background-color: rgb(178, 223, 236);
-    color: red;
+    border: rgb(238, 222, 7) 2 solid;
+    background-color: #ffffff;
+    color: rgb(231, 22, 22);
     border-radius: 20px;
     padding: 5px 30px;
+    animation: down 1s both;
+    word-wrap: break-word;
+}
+
+.alertBack{
+    animation: down 1s reverse;
+}
+
+.alert::before{
+    content: url("../img/danger.png");
+    position: absolute;
+    top: 0%;
+    left: -12%;
+    width: 10%;
 }
 
 .left{
@@ -180,6 +205,17 @@ main{
 
 .text-blue{
     color: #2F80ED;
+}
+
+.scroll{
+    overflow-y: scroll;
+    overflow-x: hidden;
+    word-wrap: break-word;
+}
+
+.scrollY{
+    word-wrap: break-word;
+    width: 50%;
 }
 
 
@@ -209,18 +245,20 @@ button:focus{
     outline: none;
 }
 
-btn-suppression{
-    width: 5%;
+#btn-suppression{
+    height: 40px;
     background-repeat: no-repeat;
     background-position: center;
+    opacity: 0.3;
+}
+
+#btn-suppression:hover{
+    transition: linear 1s;
+    opacity: 1;
 }
 
 label{
     font-size: 16px;
-}
-
-.btn-suppression{
-    height: 20px;
 }
 
 input[type='text'], select, textarea{
@@ -257,4 +295,34 @@ input[type='file']::selection{
     opacity: 0;
     width: inherit;
     height: inherit;
+}
+
+
+
+/* les keysframes */
+
+@keyframes slide{
+    0% {
+        transform: translateX(+500px);
+    }
+
+    100%{
+        transform: translateX(0px);
+    }
+}
+
+@keyframes down{
+    0%{
+        width: 0%;
+        height: 0%;
+        font-size: 0%;
+        left: 40%;
+    }
+
+    100%{
+        font-size: 80px;
+        height: 170px;
+        width: 50%;
+        left: 25%;
+    }
 }
